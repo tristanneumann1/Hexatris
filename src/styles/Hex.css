@@ -1,5 +1,36 @@
-.Hex-container {
-    height: 20px;
-    width: 20px;
-    border: 2px black solid;
+.Hex {
+	position: relative;
+  margin: 0em 0.75em;
+  width: 1em;
+  height: 1.5em;
+	/* width: 4em;
+	height: 6.2em; */
+	/* border-radius: 10px; */
+	display: inline-block;
+	top: 0;
+  transition: all 0.2s ease;
+
+	background: linear-gradient(to bottom right, #ffeb3b 0%, #fbc02d 100%);
+	color: #ffb300;
 }
+.Hex:before,
+.Hex:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.Hex:before {
+  transform: rotate(60deg);
+}
+.Hex:after {
+  transform: rotate(-60deg);
+}
+

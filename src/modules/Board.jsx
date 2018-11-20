@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import hexes from '../hexClass.js';
-import HexUnit from './Hex.jsx';
-
-const hexesArray = [...Object.values(hexes)];
+import Line from './Line.jsx';
+console.log('hexes: ', hexes);
 
 class Board extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hexesArray,
+      hexes,
     }
   }
   render() {
     const {active} = this.state;
     return (
       <div className="Board-container">
-        <div className={'Board-' + active}>
-          {hexesArray.map(hex => {
-            return <HexUnit key={`${hex.x}_${hex.y}`} hex={hex}/>
+        <div className={'Board'}>
+          {hexes.map((hexLine, i) => {
+            return <Line key={i} hexLine={hexLine}/>
           })}
         </div>
       </div>

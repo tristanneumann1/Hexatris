@@ -15,8 +15,8 @@ class HexUnit extends Component {
     const {active} = this.state;
     return (
       <div className="Hex-container">
-        <div className={'Hex-' + active}>
-          {this.state.y}
+        <div className={'Hex Hex-' + active}>
+          <span>{this.state.y}</span>
         </div>
       </div>
     );
